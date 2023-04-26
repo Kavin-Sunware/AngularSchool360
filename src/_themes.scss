@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+
+// Define your color palettes
+$palette1: mat.define-palette(mat.$indigo-palette);
+$palette2: mat.define-palette(mat.$pink-palette);
+$palette3: mat.define-palette(mat.$purple-palette);
+
+// Define your themes
+$theme1: mat.define-light-theme((color: (primary: $palette1, accent: $palette2)));
+$theme2: mat.define-dark-theme((color: (primary: $palette2, accent: $palette3)));
+$theme3: mat.define-light-theme((color: (primary: $palette3, accent: $palette1)));

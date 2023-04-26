@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  padding: 16px;
+}
+
+table {
+  // width: 100%;
+}
+
+.table-container {
+  max-height: 100vh; 
+  overflow-y: auto;
+}
+
+.global-search {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 599px) {
+  .global-search {
+    justify-content: center;
+  }
+}
+
+.mat-form-field {
+  font-size: 12px;
+  width: 100%;
+}
+.global-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-field {
+  width: 100%;
+}
+

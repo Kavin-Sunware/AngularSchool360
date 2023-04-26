@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+  <span class="logo">
+    <a href="#" routerLink="/">
+      <img src="https://media-exp1.licdn.com/dms/image/C560BAQHddqib_GkPnA/company-logo_200_200/0/1642699205005?e=2147483647&v=beta&t=cQkNQQ9ijERwMYshSUlmP95ZhSv3AoUSaEv6_zs62jM" alt="App Logo" height="30">
+    </a>
+  </span>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-items desktop">
+    <a mat-button routerLink="/get-organization">School</a>
+    <a mat-button routerLink="/get-organization">Student</a>
+    <a mat-button routerLink="/path3">Staff</a>
+  </nav>
+  
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="mobileMenu" class="mobile">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #mobileMenu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="/get-organization">
+      <span>School</span>
+    </button>
+    
+    <button mat-menu-item routerLink="/get-organization">
+      <span>Student</span>
+    </button>
+    <button mat-menu-item routerLink="/path3">
+      <span>Staff</span>
+    </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="themeMenu">
+    <mat-icon>palette</mat-icon>
+  </button>
+
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="onThemeChange('theme1')">
+      <mat-icon>palette</mat-icon>
+      <span>Theme 1</span>
+    </button>
+    <button mat-menu-item (click)="onThemeChange('theme2')">
+      <mat-icon>palette</mat-icon>
+      <span>Theme 2</span>
+    </button>
+    <button mat-menu-item (click)="onThemeChange('theme3')">
+      <mat-icon>palette</mat-icon>
+      <span>Theme 3</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

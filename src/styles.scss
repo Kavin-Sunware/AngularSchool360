@@ -1,0 +1,24 @@
+@use 'src/_themes' as themes;
+@use '@angular/material' as mat;
+
+// Include Angular Material core styles
+@include mat.core();
+
+.theme1 {
+  @include mat.all-component-themes(themes.$theme1);
+}
+
+.theme2 {
+  @include mat.all-component-themes(themes.$theme2);
+}
+
+.theme3 {
+  @include mat.all-component-themes(themes.$theme3);
+}
+
+html, body {
+   height: 100%;
+   background-color: #fafafa; 
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ 

@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Create Organization</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-grid-list [cols]="cols" rowHeight="80px" gutterSize="16px">
+      <ng-container *ngFor="let field of fields">
+        <mat-grid-tile>
+          <ng-container *ngIf="field.type !== 'checkbox'">
+            <mat-form-field appearance="fill">
+              <mat-label>{{ field.label }}</mat-label>
+              <input matInput [type]="field.type" [formControlName]="field.name" [placeholder]="field.placeholder">
+            </mat-form-field>
+          </ng-container>
+          <ng-container *ngIf="field.type === 'checkbox'">
+            <mat-checkbox [formControlName]="field.name">{{ field.label }}</mat-checkbox>
+          </ng-container>
+        </mat-grid-tile>
+      </ng-container>
+    </mat-grid-list>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</div>

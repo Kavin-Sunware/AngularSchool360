@@ -1,0 +1,34 @@
+:host {
+  display: block;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the nav items */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+}
